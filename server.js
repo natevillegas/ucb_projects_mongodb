@@ -29,7 +29,8 @@ app.use(bodyParser.urlencoded({
 app.use(express.static("public"));
 
 // Database configuration with mongoose
-mongoose.connect("mongodb://localhost/week18day3mongoose");
+mongoose.connect("mongodb://localhost/ucb_projects_mongodb");
+// mongoose.connect("mongodb:heroku_vk9td9gb:88n0klqs7vm0qbhlag9rp3v3tm@ds129344.mlab.com:29344/heroku_vk9td9gb");
 var db = mongoose.connection;
 
 // Show any mongoose errors
@@ -81,7 +82,7 @@ app.get("/scrape", function(req, res) {
     });
   });
   // Tell the browser that we finished scraping the text
-  res.send("Scrape Complete");
+  //res.send("Scrape Complete");
 });
 
 // This will get the articles we scraped from the mongoDB

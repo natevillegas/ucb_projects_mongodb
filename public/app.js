@@ -1,15 +1,8 @@
-// Grab the articles as a json
-$.getJSON("/articles", function(data) {
-  // For each one
-  for (var i = 0; i < data.length; i++) {
-    // Display the apropos information on the page
-    $("#articles").append("<p data-id='" + data[i]._id + "'>" + data[i].title + "<br />" + data[i].link + "</p>");
-  }
-});
+
 
 
 // Whenever someone clicks a p tag
-$(document).on("click", "p", function() {
+$(document).on("click", "#addNote", function() {
   // Empty the notes from the note section
   $("#notes").empty();
   // Save the id from the p tag
@@ -69,4 +62,16 @@ $(document).on("click", "#savenote", function() {
   // Also, remove the values entered in the input and textarea for note entry
   $("#titleinput").val("");
   $("#bodyinput").val("");
+});
+
+// Whenever someone clicks a p tag
+$(document).on("click", "#scrape", function() {
+  // Grab the articles as a json
+  $.getJSON("/articles", function(data) {
+    // For each one
+    for (var i = 0; i < data.length; i++) {
+      // Display the apropos information on the page
+      $("#articles").append("<li  class='list-group-item'>" + data[i].title + "<br />" + data[i].link + "<br /><button type='button' class='btn btn-secondary' id='addNote' data-id='" + data[i]._id + "'>Add Note</button></li>");
+    }
+  });
 });
