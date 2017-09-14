@@ -45,6 +45,9 @@ db.once("open", function() {
 });
 
 
+// Listen on port 3000
+app.listen(port);
+
 // Routes
 // ======
 
@@ -81,6 +84,7 @@ app.get("/scrape", function(req, res) {
       });
 
     });
+
   });
   // Tell the browser that we finished scraping the text
   //res.send("Scrape Complete");
@@ -152,5 +156,4 @@ app.post("/articles/:id", function(req, res) {
 });
 
 
-// Listen on port 3000
-app.listen(port);
+
