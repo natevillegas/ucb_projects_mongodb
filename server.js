@@ -31,7 +31,7 @@ app.use(express.static("public"));
 
 // Database configuration with mongoose
 //mongoose.connect("mongodb://localhost/ucb_projects_mongodb" || process.env.MONGODB_URI);
-mongoose.connect("mongodb:heroku_vk9td9gb:88n0klqs7vm0qbhlag9rp3v3tm@ds129344.mlab.com:29344/heroku_vk9td9gb");
+mongoose.connect("mongodb://heroku_vk9td9gb:88n0klqs7vm0qbhlag9rp3v3tm@ds129344.mlab.com:29344/heroku_vk9td9gb");
 var db = mongoose.connection;
 
 // Show any mongoose errors
