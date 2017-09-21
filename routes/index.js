@@ -8,7 +8,7 @@ var News = require('../models/News.js');
 var Note = require('../models/Note.js');
 
 router.get('/', function(req, res) {
-    request('https://www.nytimes.com', function(error, response, html) {
+    request('https://www.reddit.com/r/ethereum/', function(error, response, html) {
         var $ = cheerio.load(html);
         $('p.title').each(function(i, element) {
             var result = {};
@@ -18,7 +18,7 @@ router.get('/', function(req, res) {
             result.href = $(this).find('a').first().attr('href');
 
             if (result.href.charAt(0) === '/') {
-              result.href = 'https://www.nytimes.com' + result.href;
+              result.href = 'https://www.reddit.com' + result.href;
             }
 
             var entry = new News(result);
