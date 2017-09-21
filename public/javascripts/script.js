@@ -1,7 +1,7 @@
 var articleIndex = 0
 var articleID;
 
-$(document).on('click', '#redneck', function() {
+$(document).on('click', '#scrape', function() {
     $.getJSON('/news', function(data) {
         var article = data[articleIndex];
         articleID = article._id;

@@ -8,7 +8,7 @@ var News = require('../models/News.js');
 var Note = require('../models/Note.js');
 
 router.get('/', function(req, res) {
-    request('https://www.reddit.com/r/FloridaMan/', function(error, response, html) {
+    request('https://www.nytimes.com', function(error, response, html) {
         var $ = cheerio.load(html);
         $('p.title').each(function(i, element) {
             var result = {};
