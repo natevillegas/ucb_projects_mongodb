@@ -7,7 +7,7 @@ $(document).on('click', '#scrape', function() {
         articleID = article._id;
         $('#title').text(article.title);
         $('#link').attr('href', article.href);
-        $('#link').text('Go to article')
+        $('#link').text('Read this article')
         getNotes();
         articleIndex++;
     });
