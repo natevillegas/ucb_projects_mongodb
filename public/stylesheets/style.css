@@ -1,0 +1,24 @@
+#redneck{
+  height: 200px;
+}
+#comment-window{
+  background-color: white;
+  border: 1px black solid;
+  height: 200px;
+  overflow: auto;
+  color: black;
+  padding: 10px;
+  margin-bottom: 10px;
+}
+p{
+  font-size: 20px;
+  margin-right: 10px;
+}
+.comment{
+  float: left;
+}
+.comment-div{
+  margin-bottom: 20px;
+  padding: 5px;
+  border-bottom: black solid 0.5px;
+}
