@@ -18,7 +18,7 @@ router.get('/', function(req, res) {
             result.href = $(this).find('a').first().attr('href');
 
             if (result.href.charAt(0) === '/') {
-              result.href = 'https://www.reddit.com' + result.href;
+              result.href = 'https://www.nytimes.com' + result.href;
             }
 
             var entry = new News(result);
